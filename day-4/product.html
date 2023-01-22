@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Shopping-Hub - Women's Clothing, Accessories & Home</title>
     <link rel="stylesheet" href="product.css">
     <script src="https://kit.fontawesome.com/f30fac2c61.js" crossorigin="anonymous"></script>
     <link
@@ -133,7 +133,9 @@
 
                 </form>
                 <div class="cart-logo">
-                    <a href="./cart.html"><img src="https://img.icons8.com/ios/512/shopaholic.png" alt=""></a>
+                    <a href="./cart copy 2.html">
+                        <img src="https://img.icons8.com/ios/512/shopaholic.png" alt="">
+                    </a>
                     
                 </div>
             </div>
@@ -187,7 +189,7 @@
         <div class="right">
             <!-- <h3>HRX by Hrithik Roshan</h3> -->
             <h1>The Somerset Maxi Dress</h1>
-            <h2>314</h2>
+            <h2>$ 168</h2>
             <i class="fa-solid fa-star"></i>
             <i class="fa-solid fa-star"></i>
             <i class="fa-solid fa-star"></i>
@@ -223,7 +225,7 @@ let imag = document.querySelector("#imgs")
 let titl = document.querySelector("h1")
 let pric = document.querySelector("h2")
 
-let cartData = []
+let storedata = JSON.parse(localStorage.getItem("cart")) || []
 
 addtocart.addEventListener("click", () => {
 
@@ -233,8 +235,8 @@ addtocart.addEventListener("click", () => {
         price: pric.innerText,
         quantity: "1",
     }
-    cartData.push(data)
-    localStorage.setItem("cart-data", JSON.stringify(cartData))
+    storedata.push(data)
+    localStorage.setItem("cart", JSON.stringify(storedata))
 })
 
 </script>
