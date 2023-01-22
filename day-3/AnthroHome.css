@@ -433,3 +433,142 @@ form img {
 .img-btm > div img{
     width: 100%;
 }
+
+
+
+
+
+.footer-line-f {
+    width: 87%;
+    margin: auto;
+    background-color: #f7f6f2;
+    font-family: sans-serif;
+    border-top: 1px solid #888;
+    border-bottom: 1px solid #888;
+    margin-top: 25px;
+    padding-bottom: 20px;
+}
+
+.footer-line-f>div:nth-child(1) {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.footer-line-f>div:nth-child(1) p {
+    color: #5C5C5F;
+    font-size: 13px;
+}
+
+.footer-line-f>div:nth-child(2) {
+    width: 90%;
+    margin: auto;
+    color: #5C5C5F;
+    font-size: 11px;
+}
+
+.footer-line-f>div>div h2 {
+    font-size: 18px;
+}
+
+.footer-line-f form {
+    margin: 0px;
+    margin-top: 10px;
+}
+
+.footer-line-f button {
+    display: block;
+    border: 1px solid;
+    padding: 10px 25px;
+    background-color: #4B5666;
+    color: white;
+    font-size: 13px;
+}
+
+#email {
+    border: 1px solid;
+    width: 300px;
+    margin-bottom: 5px;
+}
+
+
+.btm-links-sec {
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    /* border: 1px solid red; */
+}
+
+
+
+.btm-links-sec {
+    font-family: sans-serif;
+}
+
+.btm-links-sec p {
+    font-size: 12px;
+    color: #5C5C5F;
+}
+
+.btm-links-sec h4 {
+    font-size: 14px;
+    font-weight: lighter;
+}
+
+.btm-links-sec p:hover {
+    color: black;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+#location p {
+    font-size: 13px;
+    color: #167A92;
+
+}
+
+#location span>svg {
+    width: 7%;
+    padding-right: 5px;
+}
+
+
+
+#social-Links {
+    width: 20%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 1px solid red; */
+    margin-top: 40px;
+}
+
+#social-Links>div:nth-child(2) {
+    display: flex;
+    justify-content: space-between;
+}
+
+#social-Links div svg {
+    width: 17%;
+}
+
+#social-Links>div:nth-child(1) {
+    margin-right: 50px;
+}
+
+
+
+#single-img-last {
+    width: 92%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+#single-img-last img {
+    width: 100%;
+}
