@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shopping-Hub - Women's Clothing, Accessories & Home</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="icon" href="./favicon.jpeg">
+  <style>
+    /* Write all necessery css here  */
+
+    .nav {
+      /* border: 2px solid red; */
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+
+    #cart-container {
+      border: 2px solid red;
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 20px;
+      /* margin: auto; */
+      justify-content: center;
+    }
+
+    #cart-container>div {
+      /* border: 2px solid red; */
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      padding: 10px;
+    }
+
+    #cart-container>div>img {
+      /* height: 200px; */
+      width: 100%;
+
+    }
+
+    #cart-container>div>button {
+      /* display: block;
+         margin: auto; */
+      background-color: rgb(227, 33, 136);
+      color: white;
+      padding: 5px;
+      border: none;
+      border-radius: 3px;
+      margin: 10px;
+      cursor: pointer;
+
+    }
+
+    #main {
+      display: grid;
+      /* border: 5px solid; */
+      grid-template-columns: 70% 28%;
+      margin-bottom: 200px;
+      padding: 10px;
+      gap: 20px;
+    }
+
+    #buy-cart {
+      background-color: aliceblue;
+      padding: 20px;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      border-radius: 5px;
+    }
+
+    #buy-cart h4 {
+      font-size: 20px;
+      text-align: center;
+    }
+
+    #cupon-div {
+      margin: 0px;
+    }
+
+    #cupon-div input:nth-child(1) {
+      margin-top: 10px;
+      border: 1px solid gray;
+      width: 10px;
+      /* margin-bottom: 20px; */
+
+      /* text-decoration: underline; */
+    }
+
+    #buy-cart button {
+      background-color: red;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      display: block;
+      margin: auto;
+      margin-top: 40px;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    /* form{
+      margin: 0px;
+    } */
+    #cupon {
+      width: 180px;
+      padding: 5px;
+      border: 1px dashed grey;
+      border-radius: 3px;
+    }
+
+    #submit {
+      width: 80px;
+      padding: 5px;
+      border: 1px solid grey;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div id="navbar">
+      <div class="inner-navbar">
+        <p><i>For all of our friends...more benefits</i></p>
+        <p>FashionPerks</p>
+        <P><a href="./signin and signup.html">sign up -- it's free</a></P>
+        <!-- <p><a href="">details</a></p> -->
+      </div>
+    </div>
+
+    <div id="signin-card">
+      <div>
+
+        <button>
+          <span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+              <defs>
+                <style>
+                  .a {
+                    fill: none
+                  }
+                </style>
+              </defs>
+              <path d="M-624.73-527.348h1840v861h-1840z" class="a"></path>
+              <path d="M-624.73-562.182h1840v861h-1840z" class="a"></path>
+              <path
+                d="M8.742 14.554a7.027 7.027 0 1 0-4.97-2.056 7.01 7.01 0 0 0 4.97 2.056zM4.527 3.312a5.961 5.961 0 1 1 0 8.43 5.943 5.943 0 0 1 0-8.43z">
+              </path>
+              <path
+                d="M15.49 14.275a9.542 9.542 0 0 0 0-13.495l-.756.756A8.473 8.473 0 0 1 2.75 13.519l-.756.756a9.51 9.51 0 0 0 6.73 2.79v1.366H4.433V19.5h9.653v-1.07H9.794v-1.428a9.492 9.492 0 0 0 5.696-2.727z">
+              </path>
+            </svg>
+          </span>
+          <span>English ($) ></span>
+        </button>
+        <button>
+          <span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" aria-hidden="true" role="img" focusable="false">
+              <defs>
+                <style>
+                  .a {
+                    fill: none
+                  }
+                </style>
+              </defs>
+              <path d="M-559.918-527.348h1840v861h-1840z" class="a"></path>
+              <path
+                d="M10 11.32a5.588 5.588 0 1 1 5.588-5.587A5.594 5.594 0 0 1 10 11.321zm0-10.024a4.437 4.437 0 1 0 4.437 4.437A4.442 4.442 0 0 0 10 1.296z">
+              </path>
+              <path
+                d="M19.5 19.855H.5v-.575a11.422 11.422 0 0 1 4.132-8.988l.712.906a10.176 10.176 0 0 0-3.678 7.506h16.668a10.178 10.178 0 0 0-3.677-7.506l.711-.906A11.423 11.423 0 0 1 19.5 19.28z">
+              </path>
+            </svg>
+          </span>
+          <span><a href="./signin and signup.html"> Sign In / Sign Up</a></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="sticky">
+      <div id="logo">
+        <div>
+          <a href="./index.html">
+            <picture>
+              <img
+                src="//images.ctfassets.net/5de70he6op10/53ZOE4rRqrxcvv0hg2eSLV/a849085e5f600c618132be2475017746/anthro-logo.svg"
+                alt="">
+            </picture>
+          </a>
+        </div>
+        <div>
+          <a href="./AnthroHome.html">
+            <picture>
+              <img
+                src="//images.ctfassets.net/5de70he6op10/y1O9tEDOvCGliGUvT9RoJ/eb8ab4734c5e3778b8b61da70ed441ac/AL_NewLogo_2.svg"
+                alt="">
+            </picture>
+          </a>
+        </div>
+
+        <form action="">
+          <div>
+            <input type="text" placeholder="search Anthropologie">
+            <button>
+              <span>
+                <img src="https://img.icons8.com/ios/512/search.png" alt="">
+              </span>
+            </button>
+          </div>
+
+        </form>
+        <div class="cart-logo">
+          <a href="./cart copy 2.html">
+            <img src="https://img.icons8.com/ios/512/shopaholic.png" alt="">
+          </a>
+
+        </div>
+      </div>
+
+
+      <div id="links">
+
+        <div>
+          <a href="">New!</a>
+          <a href="./dresses.html">Dress</a>
+          <a href="./dresses.html">Clothing</a>
+          <a href="./shoes.html">shoes</a>
+          <a href="./accessories.html">Accessories</a>
+          <a href="./gifts.html">Gifts</a>
+          <a href="">BHLDN Weddings</a>
+          <a href="./AnthroHome.html">Home & furniture</a>
+          <a href="./beauty&wellness.html">Beauty & Weddings</a>
+          <a href="./garden&outdoor.html">Garden & Outdoor</a>
+          <a href="">Sale</a>
+        </div>
+
+      </div>
+    </div>
+
+  </header>
+
+
+  <h1 id="total">Cart :- ( <span id="cart-items">0</span> items )</h1>
+  <div id="main">
+    <div id="cart-container">
+      <!-- Here Append All the cart Products  -->
+    </div>
+    <div id="buy-cart">
+      <h4 id="total">Your Total cart Price is:- <span id="cart-total">0</span></h4>
+      <form id="cupon-div">
+        HAVE A CUPON?
+        <br />
+        <input type="text" id="cupon">
+        <input type="submit" value="APPLY" id="submit">
+      </form>
+      <div id="price=detail">
+        PRICE DETAILS
+        <p>Discount :<span id="discounted" style="margin-left: 10px;">0</span></p>
+        <p>Delivery Charges : <span style="margin-left: 10px;" id="delivery">$12.50</span></p>
+        <h3>AMOUNT PAYBLE <span id="cup-dis" style="margin-left: 10px;"> 0</span></h3>
+      </div>
+      <button onclick="checkout()">CHECKOUT</button>
+
+    </div>
+  </div>
+
+</body>
+<script>
+  // Write all necessery JS here 
+
+  let storedata = JSON.parse(localStorage.getItem("cart")) || []
+
+  let container = document.getElementById("cart-container")
+
+  let disc = document.getElementById("cup-dis")
+  let minuvalue = document.getElementById("cupon")
+  let discountedValue = document.getElementById("discounted")
+  let delchar = document.getElementById("delivery")
+
+
+  function displayproduct(data) {
+
+    let cartItems = document.getElementById("cart-items");
+    cartItems.innerText = storedata.length
+
+    let total = document.getElementById("cart-total");
+    container.innerHTML = ""
+
+    storedata.forEach((product) => {
+
+      let div = document.createElement("div")
+
+      let image = document.createElement("img")
+      image.setAttribute("src", product.avatar)
+
+      let brand = document.createElement("p");
+      brand.innerText = product.name
+
+      let price = document.createElement("span");
+      price.innerText = "$" + product.price
+
+      let detail = document.createElement("p");
+      // detail.innerText = product.category
+
+      let quantity = document.createElement("span");
+      quantity.innerText = product.quantity
+
+      let remove = document.createElement("button");
+      remove.innerText = "Remove";
+      remove.addEventListener("click", () => {
+        storedata = storedata.filter((element) => {
+          return element.id !== product.id
+        })
+        localStorage.setItem("cart", JSON.stringify(storedata))
+        displayproduct()
+      })
+
+      let increment = document.createElement("button");
+      increment.innerText = "+"
+      increment.addEventListener("click", () => {
+        product = product.quantity++
+        localStorage.setItem("cart", JSON.stringify(storedata))
+        displayproduct()
+      })
+
+      let decrement = document.createElement("button");
+      decrement.innerText = "-"
+      decrement.addEventListener("click", () => {
+        if (product.quantity > 1) {
+          product = product.quantity--
+          localStorage.setItem("cart", JSON.stringify(storedata))
+          displayproduct()
+        }
+      })
+
+
+
+      div.append(image, brand, price, detail, increment, quantity, decrement, remove)
+      container.append(div)
+
+    });
+
+    let sum = 0;
+    for (let i = 0; i < storedata.length; i++) {
+      sum += storedata[i].price * storedata[i].quantity
+    }
+    total.innerText = "$" + sum
+
+
+    let disvalue = sum + 12.5
+
+    disc.innerText = "$" + disvalue
+
+    let discont = document.getElementById("cupon-div")
+    discont.addEventListener("submit", (e) => {
+      e.preventDefault()
+
+      if (minuvalue.value == "Masai30") {
+        disvalue = sum - (sum * 0.30) + 12.5
+
+        discountedValue.innerText = "$" + (sum * 0.30)
+        disc.innerText = "$" + Number(disvalue)
+      }
+
+
+
+    })
+    
+
+
+  }
+  displayproduct()
+
+
+
+  function checkout(){
+    window.location.href="./checkoutpage.html"
+  }
+
+
+
+</script>
+
+</html>
