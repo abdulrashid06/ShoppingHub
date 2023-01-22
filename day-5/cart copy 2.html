@@ -5,8 +5,9 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cart Page</title>
+  <title>Shopping-Hub - Women's Clothing, Accessories & Home</title>
   <link rel="stylesheet" href="index.css">
+  <link rel="icon" href="./favicon.jpeg">
   <style>
     /* Write all necessery css here  */
 
@@ -228,7 +229,7 @@
           <a href="./dresses.html">Clothing</a>
           <a href="./shoes.html">shoes</a>
           <a href="./accessories.html">Accessories</a>
-          <a href="">Gifts</a>
+          <a href="./gifts.html">Gifts</a>
           <a href="">BHLDN Weddings</a>
           <a href="./AnthroHome.html">Home & furniture</a>
           <a href="./beauty&wellness.html">Beauty & Weddings</a>
@@ -261,7 +262,7 @@
         <p>Delivery Charges : <span style="margin-left: 10px;" id="delivery">$12.50</span></p>
         <h3>AMOUNT PAYBLE <span id="cup-dis" style="margin-left: 10px;"> 0</span></h3>
       </div>
-      <button>CHECKOUT</button>
+      <button onclick="checkout()">CHECKOUT</button>
 
     </div>
   </div>
@@ -349,8 +350,9 @@
     total.innerText = "$" + sum
 
 
-    let disvalue = 0
+    let disvalue = sum + 12.5
 
+    disc.innerText = "$" + disvalue
 
     let discont = document.getElementById("cupon-div")
     discont.addEventListener("submit", (e) => {
@@ -366,12 +368,17 @@
 
 
     })
-    disvalue = sum + 12.5
-    disc.innerText = "$" + sum
+    
 
 
   }
   displayproduct()
+
+
+
+  function checkout(){
+    window.location.href="./checkoutpage.html"
+  }
 
 
 
